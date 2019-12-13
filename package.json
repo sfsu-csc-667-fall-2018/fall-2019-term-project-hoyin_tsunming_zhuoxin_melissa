@@ -1,22 +1,25 @@
 {
   "name": "fall-2019-term-project-hoyin_tsunming_zhuoxin_melissa",
   "version": "1.0.0",
-  "description": "",
+  "description": "A 2D chess game using Express 4",
   "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www",
-    "start:dev": "SET \"NODE_ENV=development\" SET DEBUG=myapp:* & nodemon ./bin/www",
-    "start:mac": "NODE_ENV=development DEBUG=APP_NAME:* nodemon ./bin/www",
+    "start": "node index.js",
+    "dev": "SET NODE_ENV=development&nodemon index.js",
+    "Udev": "NODE_ENV=Udevelopment nodemon index.js",
     "db:create:migration": "sequelize migration:generate --name ",
     "db:migrate": "sequelize db:migrate",
-    "db:rollback": "sequelize db:migrate:undo",
-    "postinstall": "sequelize db:migrate"
+    "db:rollback": "sequelize db:migrate:undo"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sfsu-csc-667-fall-2018/fall-2019-term-project-hoyin_tsunming_zhuoxin_melissa.git"
   },
-  "keywords": [],
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],                                            
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -27,10 +30,21 @@
     "nodemon": "^1.19.4"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
     "dotenv": "^8.2.0",
-    "heroku": "^7.33.3",
-    "pg-promise": "^9.3.3",
-    "sequelize": "^5.21.1",
-    "sequelize-cli": "^5.5.1"
-  }
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-session": "^1.17.0",
+    "express-socket.io-session": "^1.3.5",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pg": "^7.14.0",
+    "pg-promise": "^10.3.1",
+    "sequelize": "^5.21.2",
+    "sequelize-cli": "^5.5.1",
+    "socket.io": "^2.3.0"
+  },
 }
