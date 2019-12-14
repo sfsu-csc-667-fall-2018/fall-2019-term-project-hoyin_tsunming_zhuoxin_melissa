@@ -1,0 +1,1 @@
+DATABASE_URL=postgres://hoyin@localhost:5432/DATABASE_NAME i --save pg-promise
