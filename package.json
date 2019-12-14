@@ -5,13 +5,17 @@
   "main": "index.js",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "pg-promise": "^10.3.1",
+    "sequelize": "^5.21.3",
+    "sequelize-cli": "^5.5.1"
   },
   "devDependencies": {},
   "scripts": {
     "start": "node index.js",
-    "dev": "SET NODE_ENV=development&nodemon index.js",
-    "Udev": "NODE_ENV=Udevelopment nodemon index.js"
+    "db:create:migration": "sequelize migration:generate --name ",
+    "db:migrate": "sequelize db:migrate",
+    "db:rollback": "sequelize db:migrate:undo"
   },
   "repository": {
     "type": "git",
