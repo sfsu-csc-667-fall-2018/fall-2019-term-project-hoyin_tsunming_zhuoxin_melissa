@@ -74,6 +74,7 @@
 								var msg = '<div class="incoming_msg"><div class="incoming_msg_img">'+dataArray[1]+'</div><div class="received_msg"><div class="received_withd_msg"><p>'+dataArray[0]+'</p><span class="time_date"> '+dataArray[2]+' </span></div></div></div>';
 								msg_history.innerHTML += msg;
 							}
+							msg_history.scrollTop = msg_history.scrollHeight;
 						});
 
 						socket.on("broadcast", function(data) {
@@ -81,6 +82,7 @@
 							var msg = '<div class="incoming_msg"><div class="incoming_msg_img">'+data.username+'</div><div class="received_msg"><div class="received_withd_msg"><p>'+data.message+'</p><span class="time_date"> '+ts.toLocaleTimeString()+' </span></div></div></div>';
 							document.getElementById('msg_history').innerHTML += msg;
 							document.getElementById('write_msg').value = '';
+							document.getElementById('msg_history').scrollTop = document.getElementById('msg_history').scrollHeight;
 						});
 						
 						document.getElementById("msg_send_btn").addEventListener("click", function(e) {
